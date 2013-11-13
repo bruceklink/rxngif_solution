@@ -7,6 +7,12 @@
         <img src="<%= pic.source %>" width="200">
       </div>
       <p><%= pic.caption %></p>
+      <a href="http://localhost:3000/picture_details/<%= pic.id %>">Show</a>
+      <a href="http://localhost:3000/edit_picture_form/<%= pic.id %>">Edit</a>
+      <a href="http://localhost:3000/delete_picture/<%= pic.id %>">Destroy</a>
     </li>
   <% end %>
+
+
+  #can add options like Picture.where :caption => "5", :format => ".png", likes in past 24 hours >500, etc. etc., :order by- likes in past 24 hours desc)
 </ul>
