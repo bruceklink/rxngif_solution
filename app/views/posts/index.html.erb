@@ -9,9 +9,9 @@
         <img src="<%= pic.source %>" width="200">
       </div>
       <p><%= pic.caption %></p>
-      <a href="http://localhost:3000/picture_details/<%= pic.id %>">Show</a>
-      <a href="http://localhost:3000/edit_picture_form/<%= pic.id %>">Edit</a>
-      <%= link_to "Destroy", "http://localhost:3000/delete_picture/#{pic.id}", :method => "delete" %>
+      <%= link_to "Show", picture_url(pic.id) %>
+      <%= link_to "Edit", edit_picture_url(pic.id) %>
+      <%= link_to "Destroy", picture_url(pic.id), :method => "delete" %>
     </li>
   <% end %>
 
